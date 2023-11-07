@@ -1,0 +1,297 @@
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --container-bg-color: #fff;
+  --footer-bg-color: #333;
+  --input-bg-color: #fff;
+  --input-border-color: #ddd;
+}
+
+body {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding-top: 50px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --container-bg-color: #222222;
+  --footer-bg-color: #1a1a1a;
+  --input-bg-color: #333333;
+  --input-border-color: #333333;
+}
+
+/* Navigation */
+#navbar {
+    background: var(--container-bg-color);
+    border-bottom: 1px solid var(--container-bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 2em; /* Increased padding on the sides */
+    max-width: 1200px; /* Max width for content inside navbar */
+    margin: auto; /* Center the navigation container */
+    width: 100%;
+}
+
+.menu-icon {
+  display: none; /* Hidden by default, will be shown in media query */
+  cursor: pointer;
+}
+
+.brand-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: auto; /* Ensure brand name stays to the left */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a, .theme-toggle {
+    padding: 0 0.75em; /* Space out the links a bit more */
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+  color: #009688; 
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a.active {
+  color: #009688; /* Or any other highlight color */
+  border-bottom: 2px solid #009688; /* Or any other styling to indicate 'active' */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    padding: 0 0.75em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-content {
+    padding-top: 20px;
+    display: none;
+    position: absolute;
+    background-color: var(--container-bg-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Toggle button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+  align-items: flex-start; 
+
+}
+
+/* Class for content boxes */
+.content-box {
+  padding: 20px;
+  margin: 10px auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  background: var(--container-bg-color); 
+  margin-bottom: 30px; 
+  flex: 1 1 auto; 
+  min-width: 25%; 
+  max-width: calc(100% - 40px);
+}
+
+.about-container {
+  background: var(--container-bg-color); 
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  padding: 40px; /* Spacing inside the box */
+  margin: 60px auto; /* Centering the box with automatic horizontal margins */
+}
+
+/* Projects section styling */
+.project-box {
+  background: var(--container-bg-color); /* Box background color from your theme */
+  border-radius: 10px; /* Rounded corners for the boxes */
+  overflow: hidden; /* Ensures the image does not bleed outside the border-radius */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Shadow effect */
+  margin-bottom: 30px; /* Spacing between project boxes */
+  transition: transform 0.3s ease-in-out; /* For hover effect */
+}
+
+.project-box:hover {
+  transform: translateY(-5px); /* Slight raise effect on hover */
+}
+
+.project-image {
+  width: 100%; /* Ensure image covers the full width of the box */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+.project-info {
+  padding: 20px; /* Padding inside the project info area */
+}
+
+.project-links a {
+  text-decoration: none;
+  margin-right: 10px; /* Space between the links */
+  padding: 10px 15px; /* Padding inside the link elements for better touch targets */
+  border: 1px solid transparent; /* Add a border for a button-like appearance */
+  transition: border-color 0.3s ease-in-out; /* Transition for hover effect */
+}
+
+.project-links a:hover {
+  border-color: var(--text-color); /* Highlight border on hover */
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg-color);
+  color: var(--text-color);
+}
+
+/* Scroll to Top */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+  z-index: 1001; /* Above the content, under the nav */
+  opacity: 0.7;
+}
+
+#scroll-to-top:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start; 
+        padding: 0.5em 1em;
+    }
+
+     .menu-icon {
+        display: block; 
+        position: absolute; 
+        right: 10px; 
+        top: 10px; 
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        align-items: center; 
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .nav-links a, .theme-toggle, .dropdown-content a {
+        text-align: center; 
+        padding: 0.5em; 
+        border-bottom: none; 
+        width: 100%; /* Full-width links */
+    }
+
+    .dropdown-content {
+        position: static; 
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown-content:hover {
+        display: contents ; 
+    }
+    
+
+      header, section, footer {
+        margin: 10px; 
+      }
+    
+    .about-container {
+    padding: 20px; 
+    margin-top: 80px; 
+  }
+    
+  .content-box {
+    padding: 5px; 
+    margin: 0px;
+    width: 100%;
+    }
+    
+    .project-box {
+    flex-direction: column; /* Stack the image and text on top of each other on small screens */
+  }
+
+}
+/* Ensure that the sections do not stretch too wide on larger screens */
+    @media (min-width: 1200px) {
+      header, section, footer {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
