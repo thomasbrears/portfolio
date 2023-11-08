@@ -21,8 +21,6 @@ window.addEventListener("scroll", function() {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 }, false);
 
-// Theme toggle and icon update logic remains the same as you provided
-
 // Scroll to top button click logic
 document.getElementById("scroll-to-top").addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,7 +42,6 @@ function toggleDropdown(e) {
     dropdownContent.style.display = "block";
   }
 }
-
 
 // Theme toggle
 document.addEventListener('DOMContentLoaded', (event) => {

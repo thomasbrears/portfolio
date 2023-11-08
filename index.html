@@ -1,119 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <title>Thomas Brears' Portfolio</title>
+		
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer>
+		</script>
+	</head>
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-    
-</head>
-<body class="dark-theme"> <!-- default to dark theme -->
+	<body class="dark-theme"> <!-- default to dark theme --> 
+		<button id="scroll-to-top" aria-label="Scroll to top" style="display: none;">↑ Top </button> <!-- Scroll to Top Button -->
+		
+        <!-- Navigation Bar -->
+		<nav id="navbar">
+			<div class="nav-container">
+				<span class="brand-name">Thomas Brears</span>
+				<div class="menu-icon" onclick="toggleMenu()">
+					<i class="fa fa-bars"></i>
+				</div>
+				<div class="nav-links">
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<div class="dropdown">
+						<a href="#projects" class="dropbtn">Projects</a>
+						<div class="dropdown-content">
+							<a href="#projects">Featured Projects</a>
+							<a href="projects.html">All Projects</a>
+						</div>
+					</div>
+					<a href="#tech-stack">Tech Stack</a>
+					<a href="#contact">CV</a>
+					<a href="#contact">Contact</a>
+					<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+				</div>
+			</div>
+		</nav>
+		<div class="main-content">
+			
+            <!-- Home Section -->
+			<header id="home">
+				<h1>Welcome to My Portfolio</h1>
+				<p>text here</p>
+			</header>
+            
+			<!-- About Section -->
+			<section id="about">
+				<div class="about-container">
+					<h2>About Me</h2>
+					<p>About me text</p>
+				</div>
+			</section>
+            
+			<!-- Featured Projects Section -->
+			<h2>Featured Projects</h2>
+			<section id="featured-projects">
+				<!-- Project Feature 1 -->
+				<div class="project-featured-box">
+					<div class="project-featured-info">
+						<h3>Project Title 1</h3>
+						<p>Short description of the project...</p>
+						<div class="project-links">
+							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
+							rel="noopener noreferrer">GitHub</a>
+							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
+						</div>
+					</div>
+				</div>
+                
+				<!-- Project Feature 2 -->
+				<div class="project-featured-box">
+					<div class="project-featured-info">
+						<h3>Project Title 2</h3>
+						<p>Short description of the project...</p>
+						<div class="project-links">
+							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
+							rel="noopener noreferrer">GitHub</a>
+							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
+						</div>
+					</div>
+				</div>
+                
+                <!-- Project Feature 3 -->
+				<div class="project-featured-box">
+					<div class="project-featured-info">
+						<h3>Project Title 3</h3>
+						<p>Short description of the project...</p>
+						<div class="project-links">
+							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
+							rel="noopener noreferrer">GitHub</a>
+							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
+						</div>
+					</div>
+				</div>
+                
+                <!-- Project Feature 4 -->
+				<div class="project-featured-box">
+					<div class="project-featured-info">
+						<h3>Project Title 4</h3>
+						<p>Short description of the project...</p>
+						<div class="project-links">
+							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
+							rel="noopener noreferrer">GitHub</a>
+							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
+						</div>
+					</div>
+				</div>
+                
+                <!-- Project Feature 5 -->
+				<div class="project-featured-box">
+					<div class="project-featured-info">
+						<h3>Project Title 5</h3>
+						<p>Short description of the project...</p>
+						<div class="project-links">
+							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
+							rel="noopener noreferrer">GitHub</a>
+							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
+						</div>
+					</div>
+				</div>
+                
+                <!-- Project Feature 6 -->
+				<div class="project-featured-box">
+					<div class="project-featured-info">
+						<h3>Project Title 6</h3>
+						<p>Short description of the project...</p>
+						<div class="project-links">
+							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
+							rel="noopener noreferrer">GitHub</a>
+							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
+						</div>
+					</div>
+				</div>
+                
+				<a href="projects.html" style="width: 80%;" class="btn btn-large">View all projects in detail</a>
+			</section>
+            
+			<br>
+            
+			<!-- Contact Information Section -->
+			<section id="contact">
+				<h2> Contact Me</h2>
+				<div class="flex-container">
+					<div class="contact-box">
+						<i class="fa fa-envelope icon"></i>
+						<h3>Email</h3>
+						<a href="mailto:thomas@brears.xyz" class="btn" target="_blank">Thomas@Brears.xyz</a>
+					</div>
+					<div class="contact-box">
+						<i class="fa fa-phone icon"></i>
+						<h3>Phone</h3>
+						<a href="tel:+64211401576" class="btn" target="_blank">+6421 140 1576</a>
+					</div>
+					<div class="contact-box">
+						<i class="fab fa-linkedin icon"></i>
+						<h3>LinkedIn</h3>
+						<a href="https://www.linkedin.com/in/thomasbrears/" class="btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+					</div>
+					<div class="contact-box">
+						<i class="fab fa-github icon"></i>
+						<h3>GitHub</h3>
+						<a href="http://github.com/thomasbrears" class="btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+					</div>
+					<div class="contact-box">
+						<i class="fa fa-file icon"></i>
+						<h3>Curriculum vitae</h3>
+						<a href="img/cv" class="btn" target="_blank">View CV</a>
+					</div>
+				</div>
+			</section>
+		</div>
+        
+		<br>
+		<Br>
+		<Br>
+        
+		<!-- Footer Section -->
+		<footer>
+			<div class="footer-content">
+				<div class="footer-container">
+					<div class="footer-left">
+						<h2>Thomas Brears</h2>
+						<p>Short about</p>
+						<div class="social-links">
+							<!-- Social Links -->
+							<a href="http://instagram.com/thomas_brears" target="_blank" rel="noopener noreferrer">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a href="http://facebook.com/thomasbrearsnz" target="_blank" rel="noopener noreferrer">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="http://linkedin.com/in/thomasbrears" target="_blank" rel="noopener noreferrer">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="http://github.com/thomasbrears" target="_blank" rel="noopener noreferrer">
+								<i class="fab fa-github"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copy">
+					<p>&copy;
+						<script>
+							var CurrentYear = new Date().getFullYear();
+							document.write(CurrentYear);
+						</script>
+						Thomas Brears. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
 
-<!-- Scroll to Top Button -->
-<button id="scroll-to-top" aria-label="Scroll to top" style="display: none;">↑ Top</button>
-
-<!-- Navigation Bar -->
-<nav id="navbar">
-    <div class="nav-container">
-        <span class="brand-name">Your Name</span>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <div class="dropdown">
-            <a href="#projects" class="dropbtn">Projects</a>
-            <div class="dropdown-content">
-                <a href="#project1">Project 1</a>
-                <a href="#project2">Project 2</a>
-                <a href="#project3">Project 3</a>
-            </div>
-        </div>
-            <a href="#contact">Contact</a>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-        </div>
-    </div>
-</nav>
-
-
-<!-- Home Section -->
-<header id="home">
-  <h1>Welcome to My Portfolio</h1>
-  <p>I'm a Computer Science Student specialized in Software Development, Networking, and Cyber Security.</p>
-</header>
-
-<!-- About Section -->
-<section id="about">
-  <div class="about-container">
-    <h2>About Me</h2>
-    <p>Biography and relevant background information here.</p>
-    <!-- Other about content -->
-  </div>
-</section>
-
-<!-- Projects Portfolio Section -->
-<section id="projects" class="flex-container">
-  <!-- Project 1 -->
-  <div class="project-box">
-    <img src="/img/multiconverter.png" alt="Project 1 image" class="project-image">
-    <div class="project-info">
-      <h3>Project 1</h3>
-      <p>Description of the project, the technology used, and any other relevant details.</p>
-      <div class="project-links">
-        <a href="http://project1link.com" target="_blank" rel="noopener noreferrer">Website</a>
-        <a href="http://github.com/project1repo" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-  </div>
-  <!-- Project 2 -->
-  <div class="project-box">
-    <img src="/img/multiconverter.png" alt="Project 1 image" class="project-image">
-    <div class="project-info">
-      <h3>Project 1</h3>
-      <p>Description of the project, the technology used, and any other relevant details.</p>
-      <div class="project-links">
-        <a href="http://project1link.com" target="_blank" rel="noopener noreferrer">Website</a>
-        <a href="http://github.com/project1repo" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Contact Information Section -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="flex-container">
-      <div class="content-box">
-        <h3>Email</h3>
-        <p>email@example.com</p>
-      </div>
-      <div class="content-box">
-        <h3>Phone</h3>
-        <p>0211231234</p>
-      </div>
-      <div class="content-box">
-        <h3>Linked In</h3>
-        <p>ln/name</p>
-      </div>
-      <div class="content-box">
-        <h3>GitHub</h3>
-        <p>github.com</p>
-      </div>
-      <div class="content-box">
-        <h3>CV</h3>
-        <p>View CV</p>
-      </div>
-  </div>
-</section>
-
-<footer>
-  <p style="color: white;">© 2023 Your Name. All Rights Reserved.</p>
-</footer>
-
-</body>
 </html>
