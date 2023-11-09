@@ -73,3 +73,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
     updateIcon(); // Update the icon on toggle
   });
 });
+
+
+// Function to check whether an element is in the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to add 'start' class to element when it comes into view
+function animateOnScroll() {
+  const headers = document.querySelectorAll('.typed-out-container h2'); // Select all headers you want to apply this to
+
+  headers.forEach((header) => {
+    if (isInViewport(header)) {
+      header.classList.add('start'); // 'start' class to control animation
+    } else {
+      header.classList.remove('start'); // Optional: Remove the class if you want the animation to restart every time
+    }
+  });
+}
+
+// Listen for scroll events on the window
+window.addEventListener('scroll', animateOnScroll);
+
+// Optional: Run on load if any headers are initially visible
+window.addEventListener('load', animateOnScroll);

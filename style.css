@@ -126,6 +126,64 @@ body {
 	cursor:pointer;
 	font-size:1.5em;
 }
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--text-color); }
+}
+
+.typed-out-container {
+  display: inline-block;
+  max-width: fit-content;
+}
+
+.typed-out {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--text-color);
+  font-family: 'Courier New', monospace;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.typed-out.start {
+  animation: typing 2s steps(40, end) 1s forwards, blink-caret .75s step-end infinite;
+}
+
+/* Home Section Styles */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: center;
+  padding: 4rem;
+  background-color: transparent;
+  max-width: 1000px;
+}
+
+#home h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+#home h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#home p {
+  margin: 0;
+  margin-top:0.5rem;
+}
+
 .flex-container {
 	display:flex;
 	flex-wrap:wrap;
@@ -299,7 +357,8 @@ footer {
 .footer-copy {
 	margin-top:0;
 }
-}/* Scroll to Top */
+}
+/* Scroll to Top */
 #scroll-to-top {
 	position:fixed;
 	bottom:20px;
@@ -377,6 +436,38 @@ header,section,footer {
 	grid-template-columns:1fr;
 	/* Full width columns for smaller screens */
 }
+    
+.typed-out {
+    font-size: 1.1em;
+  }
+    
+#home {
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+  }
+
+  #home .intro-text {
+    max-width: 100%;
+    margin-bottom: 20px; 
+  }
+
+  #home .home-effect {
+    display: none;
+  }
+}
+
+/* Floating effect for larger screens */
+@media (min-width: 768px) {
+  .home-effect {
+    animation: float 6s ease-in-out infinite;
+    position: relative;
+  }
+  .home-effect img, .home-effect .icon {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 @media (min-width:1200px) {
