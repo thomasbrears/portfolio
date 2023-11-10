@@ -26,11 +26,25 @@ document.getElementById("scroll-to-top").addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Function to toggle the menu on mobile
+// Function to close the mobile menu
+function closeMenu() {
+  var navLinks = document.querySelector('.nav-links');
+  if (navLinks.classList.contains('active')) { // Check if the menu is open
+    navLinks.classList.remove('active'); // Close the menu
+  }
+}
+
 function toggleMenu() {
   var navLinks = document.querySelector('.nav-links');
+  var brandName = document.querySelector('.brand-name');
   navLinks.classList.toggle('active');
+  brandName.classList.toggle('adjusted'); 
 }
+
+// Add click event listeners to all nav links for mobile menu close
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', closeMenu); // Close menu when a link is clicked
+});
 
 // Toggle dropdown menu for touch devices
 function toggleDropdown(e) {
@@ -104,3 +118,59 @@ window.addEventListener('scroll', animateOnScroll);
 
 // Optional: Run on load if any headers are initially visible
 window.addEventListener('load', animateOnScroll);
+
+
+const canvas = document.getElementById('interactive-canvas');
+const ctx = canvas.getContext('2d');
+
+let width = (canvas.width = window.innerWidth);
+let height = (canvas.height = window.innerHeight);
+let particles = [];
+const numberOfParticles = 50;
+
+class Particle {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = Math.random() * 5 + 1;
+    this.speedX = Math.random() * 3 - 1.5;
+    this.speedY = Math.random() * 3 - 1.5;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.size > 0.2) this.size -= 0.1;
+  }
+
+  draw() {
+    ctx.fillStyle = 'rgba(255,255,255,0.8)';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+const initParticles = () => {
+  for (let i = 0; i < numberOfParticles; i++) {
+    particles.push(new Particle(Math.random() * width, Math.random() * height));
+  }
+};
+
+initParticles();
+
+const animate = () => {
+  ctx.clearRect(0, 0, width, height);
+  for (let i = 0; i < particles.length; i++) {
+    particles[i].update();
+    particles[i].draw();
+  }
+  requestAnimationFrame(animate);
+};
+
+animate();
+
+window.addEventListener('resize', () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
