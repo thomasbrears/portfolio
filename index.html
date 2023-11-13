@@ -442,7 +442,7 @@
 							Thomas Brears
 						</h2>
 						<p>
-							Short about
+							Kia Ora! I’m Thomas, a third-year student at Auckland University of Technology, pursuing a Bachelor of Computer and Information Sciences with a major in Software Development and minors in Networking & Cyber Security and Creative Technologies. My academic journey in Aotearoa New Zealand is a testament to my dedication to the ever-evolving IT industry, where I channel my passion for technology and food into innovative projects.
 						</p>
 						<div class="social-links">
 							<!-- Social Links -->
@@ -466,8 +466,7 @@
 					</div>
 				</div>
 				<div class="footer-copy">
-					<p>
-						&copy;
+					<p>&copy;
 						<script>
 							var CurrentYear = new Date().getFullYear();
 							document.write(CurrentYear);
@@ -477,6 +476,8 @@
 				</div>
 			</div>
 		</footer>
+        
+        <!-- Modal pop up for project-->
 		<script>
         function openModal(title, description, languages, imageUrl, githubLink, projectLink) {
             // Populate the modal with the project information
@@ -503,16 +504,13 @@
             modal.style.display = "block";
         }
 
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             var modal = document.getElementById('projectModal');
             modal.style.display = "none";
         };
 
-        // Clicking anywhere outside of the modal will close it
         window.onclick = function(event) {
             var modal = document.getElementById('projectModal');
             if (event.target == modal) {
@@ -522,16 +520,13 @@
 
         // Wait for the DOM to load before attaching event listeners
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Get the <span> element that closes the modal
-            var closeSpan = document.querySelector(".modal .close"); // Changed to querySelector for safety
+            var closeSpan = document.querySelector(".modal .close");
 
-            // When the user clicks on <span> (x), close the modal
             closeSpan.onclick = function() {
                 var modal = document.getElementById('projectModal');
                 modal.style.display = "none";
             };
 
-            // Clicking anywhere outside of the modal will close it
             window.onclick = function(event) {
                 var modal = document.getElementById('projectModal');
                 if (event.target == modal) {
