@@ -8,8 +8,7 @@
 		
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 		<link rel="stylesheet" href="style.css">
-		<script src="script.js" defer>
-		</script>
+		<script src="script.js" defer></script>
 	</head>
     
 	<body class="dark-theme"> <!-- default to dark theme --> 
@@ -72,7 +71,9 @@
             
             <!-- Tech Stack Section -->
             <section id="tech-stack">
-              <h2 class="typed-out start">My Tech Stack</h2>
+              <div class="typed-out-container">
+                <h2 class="typed-out start">My Tech Stack</h2>
+              </div>
               <div class="tech-icons">
                 
                 <div class="tech-item">
@@ -91,134 +92,145 @@
                 </div>
                 
                 <div class="tech-item">
-                  <img src="java.webp" alt="Java">
+                  <img src="img/java.webp" alt="Java">
                   <span class="tech-level">Competent</span>
                 </div>
                   
                 <div class="tech-item">
-                  <img src="c.webp" alt="C">
+                  <img src="img/c.webp" alt="C">
                   <span class="tech-level">Proficient</span>
                 </div>
                   
                 <div class="tech-item">
-                  <img src="c++.webp" alt="C++">
+                  <img src="img/c++.webp" alt="C++">
                   <span class="tech-level">Proficient</span>
                 </div>
                   
                 <div class="tech-item">
-                  <img src="c#.webp" alt="C#">
+                  <img src="img/csharp.webp" alt="C#">
                   <span class="tech-level">Familiar</span>
                 </div>
                   
                 <div class="tech-item">
-                  <img src="sql.webp" alt="SQL">
+                  <img src="img/sql.webp" alt="SQL">
                   <span class="tech-level">Proficient</span>
                 </div>
                   
                 <div class="tech-item">
-                  <img src="php.webp" alt="PHP">
+                  <img src="img/php.webp" alt="PHP">
                   <span class="tech-level">Familiar</span>
                 </div>
                 
                 <div class="tech-item">
-                  <img src="github.webp" alt="GitHub">
+                  <img src="img/github.webp" alt="GitHub">
                   <span class="tech-level">Proficient</span>
                 </div>
                 
               </div>
             </section>
 
-			<!-- Featured Projects Section -->
-            <div class="typed-out-container">
-                <h2 class="typed-out start">Featured Projects</h2>
+<!-- Featured Projects Section -->
+<div class="typed-out-container">
+    <h2 class="typed-out start">Featured Projects</h2>
+</div>
+<section id="featured-projects">
+
+    <div class="project-featured-box">
+        <div class="project-featured-info">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project...</p>
+            <div class="project-links">
+                <a href="http://github.com/project1" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+                <!-- The button for opening the modal -->
+                <button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['HTML ', 'CSS ', 'JavaScript'], 'img/multiconverter.png', 'http://github.com/project1', 'http://project1.com')">Full View</button>
             </div>
-			<section id="featured-projects">
-				<!-- Project Feature 1 -->
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>Project Title 1</h3>
-						<p>Short description of the project...</p>
-						<div class="project-links">
-							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">GitHub</a>
-							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
-							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
-						</div>
-					</div>
-				</div>
-                
-				<!-- Project Feature 2 -->
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>Project Title 2</h3>
-						<p>Short description of the project...</p>
-						<div class="project-links">
-							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">GitHub</a>
-							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
-							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
-						</div>
-					</div>
-				</div>
-                
-                <!-- Project Feature 3 -->
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>Project Title 3</h3>
-						<p>Short description of the project...</p>
-						<div class="project-links">
-							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">GitHub</a>
-							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
-							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
-						</div>
-					</div>
-				</div>
-                
-                <!-- Project Feature 4 -->
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>Project Title 4</h3>
-						<p>Short description of the project...</p>
-						<div class="project-links">
-							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">GitHub</a>
-							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
-							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
-						</div>
-					</div>
-				</div>
-                
-                <!-- Project Feature 5 -->
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>Project Title 5</h3>
-						<p>Short description of the project...</p>
-						<div class="project-links">
-							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">GitHub</a>
-							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
-							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
-						</div>
-					</div>
-				</div>
-                
-                <!-- Project Feature 6 -->
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>Project Title 6</h3>
-						<p>Short description of the project...</p>
-						<div class="project-links">
-							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">GitHub</a>
-							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
-							<a href="full-view-project1.html" class="btn btn-small">Full View</a>
-						</div>
-					</div>
-				</div>
-                
-				<a href="projects.html" style="width: 80%;" class="btn btn-large">View all projects in detail</a>
-			</section>
+        </div>
+    </div>
+    
+    <div class="project-featured-box">
+        <div class="project-featured-info">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project...</p>
+            <div class="project-links">
+                <a href="http://github.com/project1" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+                <!-- The button for opening the modal -->
+                <button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['HTML ', 'CSS ', 'JavaScript'], 'img/multiconverter.png', 'http://github.com/project1', 'http://project1.com')">Full View</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="project-featured-box">
+        <div class="project-featured-info">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project...</p>
+            <div class="project-links">
+                <a href="http://github.com/project1" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+                <!-- The button for opening the modal -->
+                <button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['HTML ', 'CSS ', 'JavaScript'], 'img/multiconverter.png', 'http://github.com/project1', 'http://project1.com')">Full View</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="project-featured-box">
+        <div class="project-featured-info">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project...</p>
+            <div class="project-links">
+                <a href="http://github.com/project1" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+                <!-- The button for opening the modal -->
+                <button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['HTML ', 'CSS ', 'JavaScript'], 'img/multiconverter.png', 'http://github.com/project1', 'http://project1.com')">Full View</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="project-featured-box">
+        <div class="project-featured-info">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project...</p>
+            <div class="project-links">
+                <a href="http://github.com/project1" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+                <!-- The button for opening the modal -->
+                <button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['HTML ', 'CSS ', 'JavaScript'], 'img/multiconverter.png', 'http://github.com/project1', 'http://project1.com')">Full View</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="project-featured-box">
+        <div class="project-featured-info">
+            <h3>Project Title 1</h3>
+            <p>Short description of the project...</p>
+            <div class="project-links">
+                <a href="http://github.com/project1" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+                <!-- The button for opening the modal -->
+                <button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['CSS ', 'JavaScript'], 'img/multiconverter.png', 'http://github.com/project1', 'http://project1.com')">Full View</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- The Modal -->
+<div id="projectModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 class="modal-title">Project Title</h3>
+        <img class="modal-image" src="" alt="Project Image">
+        <p class="modal-description">Project description</p>
+        <div class="modal-languages-used"></div>
+        <div class="modal-links"></div>
+    </div>
+</div>
+
+<!-- Link to view all projects -->
+<a href="projects.html" style="width: 80%;" class="btn btn-large">View all projects in detail</a>
+
             
 			<br>
             
@@ -295,6 +307,71 @@
 				</div>
 			</div>
 		</footer>
+        
+<script>
+function openModal(title, description, languages, imageUrl, githubLink, projectLink) {
+    // Populate the modal with the project information
+    document.querySelector('.modal-title').textContent = title;
+    document.querySelector('.modal-description').textContent = description;
+    document.querySelector('.modal-image').src = imageUrl;
+
+    // Clear previous languages and add new ones
+    const languagesUsedContainer = document.querySelector('.modal-languages-used');
+    languagesUsedContainer.innerHTML = '';
+    languages.forEach(language => {
+        const span = document.createElement('span');
+        span.textContent = language;
+        languagesUsedContainer.appendChild(span);
+    });
+
+    // Set the project links
+    const linksContainer = document.querySelector('.modal-links');
+    linksContainer.innerHTML = `<a href="${githubLink}" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="${projectLink}" class="btn btn-small" target="_blank" rel="noopener">Website</a>`;
+
+    // Display the modal
+    var modal = document.getElementById('projectModal');
+    modal.style.display = "block";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    var modal = document.getElementById('projectModal');
+    modal.style.display = "none";
+};
+
+// Clicking anywhere outside of the modal will close it
+window.onclick = function(event) {
+    var modal = document.getElementById('projectModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+// Wait for the DOM to load before attaching event listeners
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Get the <span> element that closes the modal
+    var closeSpan = document.querySelector(".modal .close"); // Changed to querySelector for safety
+
+    // When the user clicks on <span> (x), close the modal
+    closeSpan.onclick = function() {
+        var modal = document.getElementById('projectModal');
+        modal.style.display = "none";
+    };
+
+    // Clicking anywhere outside of the modal will close it
+    window.onclick = function(event) {
+        var modal = document.getElementById('projectModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+});
+
+</script>
 	</body>
 
 </html>
