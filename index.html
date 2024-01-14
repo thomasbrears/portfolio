@@ -75,7 +75,7 @@
 				</h1>
 				<!--<h2>Software Developer</h2>-->
 				<p class="intro-detail">
-					Third Year Bachelor of Computer and Information Sciences student at Auckland
+					Final Year Bachelor of Computer and Information Sciences student at Auckland
 					University of Technology in Aotearoa New Zealand. Specialising in Software
 					Development, Networking & Cyber Security and Creative Technologies.
 				</p>
@@ -188,30 +188,23 @@
 				</h2>
 			</div>
 			<section id="featured-projects">
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>
-							This Portfolio
-						</h3>
-						<p>
-							This portfolio is 
-						</p>
-						<div class="project-links">
-							<a href="http://github.com/thomasbrears/portfolio" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">
-								GitHub
-							</a>
-							<a href="http://thomas.brears.xyz" class="btn btn-small" target="_blank" rel="noopener">
-								Website
-							</a>
-							<!-- The button for opening the modal -->
-							<button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['HTML ', 'CSS ', 'JavaScript'], 'img/portfolio.png', 'http://github.com/thomasbrears/portfolio', 'http://project1.com')">
+
+                <div class="project-featured-box">
+                    <div class="project-featured-info">
+                        <h3>My Portfolio</h3>
+                        <p>Highlighting website design and development skills through this static portfolio website. It's a responsive, interactive showcase of my work, reflecting my ability to blend design with functionality for an optimal user experience.</p>
+                        <div class="project-links">
+                            <a href="http://github.com/project1" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">Website</a>
+                            <!-- The button for opening the modal -->
+                            <button class="btn btn-small" onclick="openModal('This Website - My Portfolio', 'Crafted with HTML, CSS, and JavaScript, this website reflects my proficiency in web development and eye for detail in creating a responsive, user-centric interface. From wireframing to coding, Ive built this site to showcase my technical skills in a practical, engaging way. Its designed to be intuitive and accessible, displaying my projects through a combination of interactive and static elements that invite you to explore the depth of my work. As you navigate through, youll experience firsthand the dynamic content and responsive layout that adjusts fluidly across devices, highlighting my ability to create sleek, modern web experiences. This portfolio is more than a collection of projects. its a testament to my growth and continuous learning journey in software development. Every line of code has been written to challenge myself and to improve. Ive integrated features that represent my capabilities in real-time, offering a transparent window into the methodologies I use and the value I bring to my work.', ['HTML ', 'CSS ', 'JavaScript'], 'img/portfolio.png', 'http://github.com/thomasbrears/portfolio', 'http://thomas.brears.xyz')">
 								Full View
 							</button>
-						</div>
-					</div>
-				</div>
-				<div class="project-featured-box">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-featured-box">
 					<div class="project-featured-info">
 						<h3>
 							Project Title 1
@@ -234,29 +227,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="project-featured-box">
-					<div class="project-featured-info">
-						<h3>
-							Project Title 1
-						</h3>
-						<p>
-							Short description of the project...
-						</p>
-						<div class="project-links">
-							<a href="http://github.com/project1" class="btn btn-small" target="_blank"
-							rel="noopener noreferrer">
-								GitHub
-							</a>
-							<a href="http://project1.com" class="btn btn-small" target="_blank" rel="noopener">
-								Website
-							</a>
-							<!-- The button for opening the modal -->
-							<button class="btn btn-small" onclick="openModal('Project Title 1', 'Long description of Project...', ['HTML ', 'CSS ', 'JavaScript'], 'img/multiconverter.png', 'http://github.com/project1', 'http://project1.com')">
-								Full View
-							</button>
-						</div>
-					</div>
-				</div>
+                
 				<div class="project-featured-box">
 					<div class="project-featured-info">
 						<h3>
@@ -327,31 +298,26 @@
 					</div>
 				</div>
 			</section>
+            
 			<!-- The Modal -->
-			<div id="projectModal" class="modal">
-				<!-- Modal content -->
-				<div class="modal-content">
-					<span class="close">
-						&times;
-					</span>
-					<h3 class="modal-title">
-						Project Title
-					</h3>
-					<img class="modal-image" src="" alt="Project Image">
-					<p class="modal-description">
-						Project description
-					</p>
-					<div class="modal-languages-used">
-					</div>
-					<div class="modal-links">
-					</div>
-				</div>
-			</div>
-			<!-- Link to view all projects -->
+            <div id="projectModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 class="modal-title">Project Title</h3>
+                    <img class="modal-image" src="" alt="Project Image">
+                    <p class="modal-description">Project description</p>
+                    <div class="modal-languages-used"></div>
+                    <div class="modal-links"></div>
+                </div>
+            </div>
+            
+			<!-- Link to view all projects
 			<a href="projects.html" style="width: 80%;" class="btn btn-large">
 				View all projects in detail
-			</a>
+			</a> -->
 			<br>
+            
 			<!-- Contact Information Section -->
 			<section id="contact">
 				<div class="typed-out-container">
@@ -461,65 +427,49 @@
 			</div>
 		</footer>
         
-        <!-- Modal pop up for project-->
-		<script>
-        function openModal(title, description, languages, imageUrl, githubLink, projectLink) {
-            // Populate the modal with the project information
-            document.querySelector('.modal-title').textContent = title;
-            document.querySelector('.modal-description').textContent = description;
-            document.querySelector('.modal-image').src = imageUrl;
+        <!-- Modal pop up for project -->
+<script>
+    function openModal(title, description, languages, imageUrl, githubLink, projectLink) {
+        // Populate the modal with the project information
+        document.querySelector('.modal-title').textContent = title;
+        document.querySelector('.modal-description').textContent = description;
+        document.querySelector('.modal-image').src = imageUrl;
 
-            // Clear previous languages and add new ones
-            const languagesUsedContainer = document.querySelector('.modal-languages-used');
-            languagesUsedContainer.innerHTML = '';
-            languages.forEach(language => {
-                const span = document.createElement('span');
-                span.textContent = language;
-                languagesUsedContainer.appendChild(span);
-            });
-
-            // Set the project links
-            const linksContainer = document.querySelector('.modal-links');
-            linksContainer.innerHTML = `<a href="${githubLink}" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                        <a href="${projectLink}" class="btn btn-small" target="_blank" rel="noopener">Website</a>`;
-
-            // Display the modal
-            var modal = document.getElementById('projectModal');
-            modal.style.display = "block";
-        }
-
-        var span = document.getElementsByClassName("close")[0];
-
-        span.onclick = function() {
-            var modal = document.getElementById('projectModal');
-            modal.style.display = "none";
-        };
-
-        window.onclick = function(event) {
-            var modal = document.getElementById('projectModal');
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
-
-        // Wait for the DOM to load before attaching event listeners
-        document.addEventListener('DOMContentLoaded', (event) => {
-            var closeSpan = document.querySelector(".modal .close");
-
-            closeSpan.onclick = function() {
-                var modal = document.getElementById('projectModal');
-                modal.style.display = "none";
-            };
-
-            window.onclick = function(event) {
-                var modal = document.getElementById('projectModal');
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            };
+        // Clear previous languages and add new ones
+        const languagesUsedContainer = document.querySelector('.modal-languages-used');
+        languagesUsedContainer.innerHTML = '';
+        languages.forEach(language => {
+            const span = document.createElement('span');
+            span.textContent = language;
+            languagesUsedContainer.appendChild(span);
         });
 
-        </script>
+        // Set the project links
+        const linksContainer = document.querySelector('.modal-links');
+        linksContainer.innerHTML = `<a href="${githubLink}" class="btn btn-small" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <a href="${projectLink}" class="btn btn-small" target="_blank" rel="noopener">Website</a>`;
+
+        // Display the modal
+        var modal = document.getElementById('projectModal');
+        modal.style.display = "block";
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        var modal = document.getElementById('projectModal');
+        modal.style.display = "none";
+    };
+
+    // Clicking anywhere outside of the modal will close it
+    window.onclick = function(event) {
+        var modal = document.getElementById('projectModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
 	</body>
 
 </html>
