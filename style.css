@@ -225,50 +225,64 @@ to {
 	text-align:left;
 	line-height:1.2;
 }
+
 /* Tech stack section */
 #tech-stack {
-	text-align:center;
-	padding:2rem;
+  text-align: center;
+  padding: 2rem;
 }
+
 .tech-icons {
-	display:flex;
-	justify-content:center;
-	flex-wrap:wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
+
 .tech-item {
-	margin:1rem;
-	position:relative;
-	display:inline-block;
-	text-align:center;
+  margin: 1rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
 }
+
 .tech-item img {
-	width:60px;
-	height:auto;
-	transition:transform 0.3s ease;
+  width: 50px;
+  height: auto;
+  max-height: 80px;
+  transition: transform 0.3s ease;
 }
+
 .tech-item:hover img {
-	transform:scale(1.1);
+  transform: scale(1.1);
 }
-.tech-level {
-	visibility:hidden;
-	width:auto;
-	background-color:var(--container-bg-color);
-	color:var(--text-color);
-	text-align:center;
-	border-radius:6px;
-	padding:5px;
-	position:absolute;
-	z-index:1;
-	bottom:100%;
-	left:50%;
-	margin-left:-60px;
-	opacity:0;
-	transition:opacity 0.3s ease;
+
+/* Label displayed below image */
+.tech-label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
+
 .tech-item:hover .tech-level {
-	visibility:visible;
-	opacity:1;
+  visibility: visible;
+  opacity: 1;
 }
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .tech-item img {
+    width: 50px;
+  }
+
+  .tech-label {
+    font-size: 0.8rem;
+  }
+}
+
 /* Featured Projects Section */
 #featured-projects {
 	text-align:center;
