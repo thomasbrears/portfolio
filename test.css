@@ -1,0 +1,542 @@
+
+:root {
+    /* Dark Mode Colors (Default) */
+    --bg-color: #040d08;
+    --section-color: #0a1e14;
+    --text-color: #e0f0e5;
+    --container-bg-color: #0a1e14;
+    --tab-color: #333333;
+    --input-bg-color: #333333;
+    --input-border-color: #333333;
+    --accent-green: #156e3d;
+    --button-bg-color: #030800;
+    --button-hover-bg-color: #0e4e2b;
+    --social-icon-color: #156e3d;
+    --shadow-color: rgba(102, 101, 101, 0.348);
+}
+
+.light-theme {
+    /* Dark Mode Colors */
+	--bg-color: #ebf7ed;
+    --text-color: #333;
+	--section-color: #fff;
+    --container-bg-color: #fff;
+    --tab-color: #ebf7ed;
+    --input-bg-color: #fff;
+    --input-border-color: #ddd;
+    --accent-green: #1d8d4f;
+    --button-bg-color: #e0ffc8;
+    --button-hover-bg-color: #0c562d;
+    --social-icon-color: #1d8d4f;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+:root {
+    /* Dark Mode Colors */
+    --bg-dark: #040d08; 
+    --text-light: #e0f0e5;
+    --accent-green: #1d8d4f;
+    --card-bg: #0a1e14; 
+
+    /* Light Mode Colors */
+    --bg-light: #f4f4f4;
+    --text-dark: #333;
+    --bg-light-card: #ffffff;
+    --text-light-dark: #000;
+}
+
+/* Dark Mode (Default) */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+/* Light Mode Toggle */
+body.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Light Mode Specific Styles */
+body.light-mode .profile-section,
+body.light-mode .section {
+    background-color: var(--bg-light-card);
+    color: var(--text-light-dark);
+}
+
+body.light-mode .profile-pronouns {
+    color: var(--accent-green);
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+	gap: 30px;
+}
+
+/* left Side Profile */
+.profile-section {
+    width: 300px !important;
+	max-width: 300px;
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-green);
+	border-color: var(--accent-green);
+}
+
+.profile-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.profile-name,
+.profile-pronouns {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.profile-pronouns {
+    color: var(--accent-green);
+	font-size: 0.8em;
+}
+
+.profile-about {
+	font-size: 0.8em;
+}
+
+.separator-dot {
+    color: var(--accent-green);
+    font-size: 0.9em;
+    margin: 0 5px;
+}
+
+.profile-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+	font-size: 0.8em;
+}
+
+.location-icon {
+    width: 12px;
+    height: auto;
+    color: var(--accent-green);
+}
+
+/* Button Styles */
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.profile-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-green);
+}
+
+.hire-btn,
+.cv-btn {
+    background-color: var(--card-bg);
+    color: var(--text-light);
+	font-size: 0.8em;
+}
+
+body.light-mode .hire-btn,
+body.light-mode .cv-btn, 
+body.light-mode .profile-image	{
+    background-color: #e0e0e0;
+    color: var(--text-dark);
+    border: 1px solid var(--accent-green);
+}
+
+.profile-btn:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+}
+
+/* Horizontal Line */
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--accent-green);
+    margin: 20px 0;
+}
+
+/* Social Links */
+/* Social Links */
+.social-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    color: var(--text-light);
+	font-size: 0.8em;
+}
+
+.social-links li i {
+    color: var(--accent-green);
+    width: 20px;
+    height: 20px;
+}
+
+/* Style anchor tags */
+.social-links li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Light Mode Adjustments */
+body.light-mode .social-links li {
+    color: var(--text-dark);
+}
+
+body.light-mode .social-links li i {
+    color: var(--accent-green);
+}
+
+
+/* right Side Content */
+.content-section {
+    flex-grow: 1;
+    margin-left: 30px;
+    padding: 20px;
+	overflow-x: auto;
+	max-width: 650px;
+}
+
+.section {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode Toggle Switch */
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.mode-toggle input {
+    display: none;
+}
+
+.mode-toggle label {
+    background-color: var(--accent-green);
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.mode-toggle label::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle input:checked + label::before {
+    transform: translateX(30px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .profile-section {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .content-section {
+        margin-left: 0;
+    }
+}
+
+.tech-category {
+    display: none;
+}
+
+.tech-category.active {
+    display: block;
+}
+
+/* Tech Toggle Bar */
+.tech-toggle {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    background-color: #333; /* dark background for the entire bar */
+    overflow: hidden; /* Ensure buttons don't overflow */
+}
+
+.toggle-button {
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 30px; /* Rounded corners */
+    flex: 1; /* Make buttons fill equally */
+}
+
+.toggle-button.active {
+    background-color: #4CAF50; /* Darker green for active state */
+    color: #fff;
+    border-radius: 30px; /* Ensure pill shape for the active button */
+}
+
+.toggle-button:not(.active):hover {
+    background-color: #379c3a; /* Slightly darker on hover for non-active buttons */
+}
+
+.toggle-button:first-child {
+    border-top-left-radius: 30px; /* Ensure rounded corners on the left */
+    border-bottom-left-radius: 30px;
+}
+
+.toggle-button:last-child {
+    border-top-right-radius: 30px; /* Ensure rounded corners on the right */
+    border-bottom-right-radius: 30px;
+}
+  
+  /* Tech Category Styles */
+.tech-category {
+	margin-bottom: 30px;
+  }
+  
+  .tech-category h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 15px;
+	color: #e2e2e2;
+  }
+  
+  /* Tech Icons Section Styles */
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between items */
+    justify-content: space-evenly; /* Ensures equal spacing */
+    width: 100%; /* Ensure full width available */
+    box-sizing: border-box;
+}
+  
+  /* Tech Item Styles */
+  .tech-item {
+    background-color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100px; /* Fixed width for consistency */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tech-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.tech-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    margin-bottom: 4px; /* Space between name and proficiency */
+}
+
+.tech-proficiency {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ccc;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Proficiency Badge Styles */
+.tech-proficiency::before {
+    content: "";
+    display: block;
+    margin-top: 8px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    transition: background-color 0.3s ease;
+}
+
+.tech-item .tech-proficiency[data-level="Proficient"]::before {
+    background-color: #4caf50;
+}
+
+.tech-item .tech-proficiency[data-level="Experienced"]::before {
+    background-color: #2196f3;
+}
+
+.tech-item .tech-proficiency[data-level="Familiar"]::before {
+    background-color: #ff9800;
+}
+
+.tech-item .tech-proficiency[data-level="Learning"]::before {
+    background-color: #9e9e9e;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tech-icons {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tech-item {
+        width: 90px; /* Make items slightly smaller on mobile */
+        padding: 8px;
+    }
+
+    .tech-category h3 {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .tech-label {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* General Styles for Work Experience and Education */
+.job-header,
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.job-title,
+.degree-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.date-location,
+.institution-location {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 400;
+    margin: 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.separator-dot {
+    margin: 0 5px;
+    color: var(--text-light);
+}
+
+.job-description,
+.degree-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Light Mode Adjustments */
+body.light-mode .job-header,
+body.light-mode .timeline-item {
+    background-color: var(--bg-light-card);
+    color: var(--text-dark);
+}
+
+body.light-mode .job-title,
+body.light-mode .degree-title,
+body.light-mode .date-location,
+body.light-mode .institution-location,
+body.light-mode .job-description,
+body.light-mode .degree-description {
+    color: var(--text-dark);
+}
