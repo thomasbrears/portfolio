@@ -47,11 +47,23 @@
 		  <a href="#tech-stack">Tech Stack</a>
 		  <a href="#contact">CV</a>
 		  <a href="#contact">Contact</a>
+		  <a href="#"> </a>
 
-		  <div class="theme-toggle">
-			<input type="checkbox" id="theme-toggle">
-			<label for="theme-toggle"></label>
-		  </div>
+		  <!-- Theme Toggle -->
+		  <div id="themeSwitch" style="position: relative; width: 50px; height: 26px; background-color: #000; border-radius: 50px; padding: 2px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+			<input
+			  type="checkbox"
+			  id="checkbox"
+			  style="opacity: 0; position: absolute;"
+			  onchange="toggleSwitch(this)"
+			>
+			<label for="checkbox" style="display: flex; width: 100%; height: 100%; justify-content: space-between; align-items: center; position: relative;">
+			  <i class="fas fa-moon" style="color: #1d8d4f; font-size: 14px; margin-left: 5px;"></i>
+			  <i class="fas fa-sun" style="color: #f39c12; font-size: 14px; margin-right: 5px;"></i>
+			  <span id="ball" style="background-color: #fff; width: 22px; height: 22px; position: absolute; left: 2px; top: 2px; border-radius: 50%; transition: transform 0.2s linear;"></span>
+			</label>
+		</div>
+		  
 		</div>
 	  </div>
 	</nav>
@@ -74,7 +86,7 @@
             <p class="profile-about">Final Year Bachelor of Computer and Information Sciences student, Specialising in Software Development, Networking & Cyber Security and Creative Technologies.</p>
             
             <div class="profile-actions">
-                <a href="#contact" class="profile-btn hire-btn">Hire Me</a>
+                <a href="#contact" class="profile-btn hire-btn">Contact Me</a>
                 <a href="img/cv.pdf" target="_blank" class="profile-btn cv-btn">Curriculum vitae</a>
             </div>
 
