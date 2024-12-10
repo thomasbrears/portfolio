@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Projects | Thomas Brears</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Scroll to Top Button -->
+	<button id="scroll-to-top" aria-label="Scroll to top" style="display: none;">↑ Top</button>
+
+	<!-- Navigation Bar -->
+	<nav id="navbar">
+	  <div class="nav-container">
+		<span class="brand-name">Thomas Brears</span>
+		<div class="menu-icon" onclick="toggleMenu()">
+		  <i class="fa fa-bars"></i>
+		</div>
+		<div class="nav-links">
+          <a href="index.html">Home</a>
+		  <a href="index.html#about">About</a>
+		  <a href="#">Projects</a>
+		  <a href="index.html#tech-stack">Tech Stack</a>
+		  <a href="index.html#contact">CV</a>
+		  <a href="index.html#contact">Contact</a>
+
+		  <div class="theme-toggle">
+			<input type="checkbox" id="theme-toggle">
+			<label for="theme-toggle"></label>
+		  </div>
+		</div>
+	  </div>
+	</nav>
+
+  <!-- Projects Section -->
+  <header class="projects-header">
+    <h1>All Projects</h1>
+    <p>Browse through all my projects, including pinned and other notable works.</p>
+  </header>
+  
+  <section class="section" id="all-projects">
+    <div class="all-projects-container">
+      <div class="all-project">
+        <img src="img/project1.png" alt="Project 1 Screenshot" class="all-project-image">
+        <div class="all-project-details">
+          <h3>Project Title</h3>
+          <p>Project description goes here. It provides an overview of the project and its purpose.</p>
+          <div class="all-project-meta">
+            <div class="all-project-links">
+              <a href="https://github.com/" target="_blank">GitHub</a>
+              <a href="https://website.com" target="_blank">Website</a>
+            </div>
+            <div class="all-tech-logos">
+              <img src="img/html.png" alt="HTML Logo">
+              <img src="img/css.png" alt="CSS Logo">
+              <img src="img/js.png" alt="JavaScript Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="all-project">
+        <img src="img/project2.png" alt="Project 2 Screenshot" class="all-project-image">
+        <div class="all-project-details">
+          <h3>Project Title</h3>
+          <p>Project description goes here. It provides an overview of the project and its purpose.</p>
+          <div class="all-project-meta">
+            <div class="all-project-links">
+              <a href="https://github.com/" target="_blank">GitHub</a>
+              <a href="https://website.com" target="_blank">Website</a>
+            </div>
+            <div class="all-tech-logos">
+              <img src="img/react.png" alt="React Logo">
+              <img src="img/nodejs.png" alt="Node.js Logo">
+              <img src="img/mongodb.png" alt="MongoDB Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+   
+
+</body>
+</html>
