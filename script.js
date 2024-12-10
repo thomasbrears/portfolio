@@ -58,33 +58,41 @@ function toggleDropdown(e) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("theme-toggle");
+  const checkbox = document.getElementById("checkbox");
+  const themeSwitch = document.getElementById("themeSwitch");
+  const ball = document.getElementById("ball");
   const body = document.body;
 
-  // Check local storage for saved theme
+  // Retrieve theme from localStorage
   const savedTheme = localStorage.getItem("theme");
-  
-  // Default to dark theme if no saved theme
+
   if (savedTheme === "light") {
     body.classList.add("light-theme");
-    toggle.checked = true;
+    themeSwitch.style.backgroundColor = "#ebf7ed"; // Light background
+    ball.style.transform = "translateX(24px)"; // Ball position for light mode
+    checkbox.checked = true;
   } else {
-    body.classList.remove("light-theme");
-    toggle.checked = false;
+    body.classList.add("dark-theme");
+    themeSwitch.style.backgroundColor = "#000"; // Dark background
+    ball.style.transform = "translateX(0)"; // Ball position for dark mode
   }
 
-  toggle.addEventListener("change", () => {
-    if (toggle.checked) {
-      // Switch to light theme
-      body.classList.add("light-theme");
+  // Listen for checkbox state change
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      body.classList.replace("dark-theme", "light-theme");
+      themeSwitch.style.backgroundColor = "#ebf7ed"; // Light background
+      ball.style.transform = "translateX(24px)";
       localStorage.setItem("theme", "light");
     } else {
-      // Switch to dark theme
-      body.classList.remove("light-theme");
+      body.classList.replace("light-theme", "dark-theme");
+      themeSwitch.style.backgroundColor = "#000"; // Dark background
+      ball.style.transform = "translateX(0)";
       localStorage.setItem("theme", "dark");
     }
   });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('.toggle-button');
